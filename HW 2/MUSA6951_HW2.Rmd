@@ -15,6 +15,7 @@ output: output:
     df_print: paged
     css: styles.css
 ---
+## Set Up
 
 ```{r setup, include=FALSE}
 install.packages("tidycensus")
@@ -110,14 +111,14 @@ mapview(all_data, zcol = "PctChange10_15") #Visualize based on population change
   
 ```{r customize}
 mapview(all_data, zcol = "PctChange10_15", 
-         col.regions = RColorBrewer::brewer.pal(9, "Purples"), 
+         col.regions = RColorBrewer::brewer.pal(5, "Purples"), 
          alpha.regions = 1)
 ```
 
 Now, let's explore a couple of the intriguing syntax choices.
 
 ```{r Dataprep_syntax}
-map1015 <- mapview(all_data, zcol = "PctChange10_15", 
+map1015 <- mapview(all_data, zcol = "PctChange10_15",
                    layer.name = "Pct change 2010-2015")
 
 map1520 <- mapview(all_data, zcol = "PctChange15_20", 
@@ -154,4 +155,12 @@ mapview(all_data, zcol = "PctChange10_15",
 
 ## Conclusion
 
+  In this tutorial, the "mapview" function has been introduced, showcasing its utility in the creation of interactive visualizations that facilitate analysis of both geometries and their associated attributes. The fundamental functionality of "mapview" lies in its capacity to process and represent spatial data in the form of points, lines, and polygons with background map to reference the accurate location. Moreover, it offers the ability to visualize a particular column within a dataset. The customization of visualizations is remarkably easy and convenient through the application of the "mapview" function.Besides,"mapview" function can act as a great tool to make comparison and contrast of two maps.
+  More Detailed instructions and information are available online if you want to become a master of using "mapview" function. I recommend read through the article written by Sharon Machlis at https://www.infoworld.com/article/3644848/astonishingly-easy-mapping-in-r-with-mapview.html as she did an way more explicit job on explaining the function. Also you may file bug reports and feature requests regarding "mapview" function at https://github.com/r-spatial/mapview/issues.
+  
 ## Evaluation
+
+  Clarity and organization of content: I have asked ChatGPT to polish my writing and giving some revision on some unclear content, so the tutorial should be easy and clear to read. Organization is strictly following the assignment instruction and contents are carefully arranged under different subtitles.
+Accuracy and correctness of code examples: I am capable of running all the code without any errors at my end, so I give myself 10/10 for this part.
+The reproducibility of your tutorial: Is this going to work when you share it with your classmates? Not sure yet, hopefully I will find out during class.
+Overall presentation and readability of your R Markdown document: I am confident in my work, so still a 10/10 for this part of evaluation.

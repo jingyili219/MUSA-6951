@@ -163,4 +163,4 @@ mapview(all_data, zcol = "PctChange10_15",
   Clarity and organization of content: I have asked ChatGPT to polish my writing and giving some revision on some unclear content, so the tutorial should be easy and clear to read. Organization is strictly following the assignment instruction and contents are carefully arranged under different subtitles.
 Accuracy and correctness of code examples: I am capable of running all the code without any errors at my end, so I give myself 10/10 for this part.
 The reproducibility of your tutorial: Is this going to work when you share it with your classmates? Not sure yet, hopefully I will find out during class.
-Overall presentation and readability of your R Markdown document: I am confident in my work, so still a 10/10 for this part of evaluation.
+Overall presentation and readability of your R Markdown document: I am confident in my work, for I have detailed instructions, well-annotated codes, and a clear format. Therefore, give myself a 10/10 for this part of evaluation as well. 

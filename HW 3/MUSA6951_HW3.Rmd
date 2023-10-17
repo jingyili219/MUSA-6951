@@ -148,36 +148,6 @@ pt <- ggplot() +
 plot2<-pt+theme_school()
 ```
 
-```{r}
-
-theme_doesnothing<-theme(
-  theme_minimal()%+replace%
-   theme (
-  axis.title.x = element_blank(),
-  axis.title.y = element_blank(),
-  axis.ticks.x = element_blank(),
-  axis.ticks.y = element_blank(),
-  axis.line = element_blank(),
-  axis.text = element_blank(),
-  plot.margin = unit(c(1, 4, 1, 1), "cm"))
-)
-
-st<-ggplot(SchoolType,mapping = aes(y=reorder(TYPE_SPECIFIC,count),x=count)) + 
-  geom_col(size = 1,fill="lightblue")+
-  geom_text(aes(label = count), hjust = 1, color = "white")+
-  labs(x="Count", y="School Type", title = "School Type in Count of Philly") 
-
-gl<-ggplot(GradeLevel,mapping = aes(y=reorder(GRADE_LEVEL,count),x=count)) + 
-  geom_col(size=1,fill="darkblue")+
-  geom_text(aes(label = count), hjust = 1, color = "white")+
-  labs(x="Count", y="Grade", title = "Grade Level in Count of Philly", 
-       caption = "Data source: OpenDataPhilly.com") 
-
-plot1<-st+theme_school()
-plot2<-gl+theme_school()
-combined_plot<-plot1+plot2
-```
-
 ## Average Annual Temperature in °F Change in Tucson, AZ between 1895 to 2020.
 
 Act now to cope with climate change

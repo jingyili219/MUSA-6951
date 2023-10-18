@@ -88,6 +88,7 @@ pt <- ggplot(Least10, aes(x = PopCount20, y =reorder(NAME,-PopCount20))) +
        caption = "Data source: 2016-2020 5-year American Community Survey(ACS)\n ArcGIS Open Data")+
   annotation_custom(grob_explanation)
 plot=pt+theme_AZpop()
+print(plot)
 ```
 
 ## Schools in Philadelphia
@@ -146,6 +147,7 @@ pt <- ggplot() +
   geom_richtext(aes(x = 10, y = 7), label = "and 42 <br /> **Charter Schools.**", color = "black", hjust = 1, label.color = NA)
 
 plot2<-pt+theme_school()
+print(plot2)
 ```
 
 ## Average Annual Temperature in °F Change in Tucson, AZ between 1895 to 2020.
@@ -224,5 +226,6 @@ TC <- ggplot()+
   labs(x="Year",y="Average Annual Temperature(°F)",title = "Average Annual Temperature in °F Change",subtitle="The Case of Tucson, AZ from 1895 to 2020", caption = "Data source: Carnegie Mellon University\n https://kilthub.cmu.edu") 
 
 plot3=TC+theme_Tucson()  
+print(plot3)
 ```
 

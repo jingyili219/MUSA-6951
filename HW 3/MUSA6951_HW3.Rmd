@@ -89,6 +89,7 @@ pt <- ggplot(Least10, aes(x = PopCount20, y =reorder(NAME,-PopCount20))) +
   annotation_custom(grob_explanation)
 plot=pt+theme_AZpop()
 print(plot)
+ggsave("Least Populated AZ Counties.jpeg",width=12,height=8)
 ```
 
 ## Schools in Philadelphia
@@ -140,7 +141,7 @@ pt <- ggplot() +
   geom_tile(aes(x, y), data = df_district, color = "white", fill = "#B0C4DE") +
   geom_tile(aes(x, y), data = df_private, color = "white", fill = "#8FBC8F") +
   geom_tile(aes(x, y), data = df_charter, color = "white", fill = "#FFFFF0",alpha=0.5) +
-  labs(title = "School Type in Philadelphia",caption = "Data source: OpenDataPhilly.com") +
+  labs(title = "School Types in Philadelphia",caption = "Data source: OpenDataPhilly.com") +
   coord_cartesian(clip = "off") +
   geom_richtext(aes(x = 10, y = 9), label = "If there are **100<br/>District Schools**...", color = "#B0C4DE", hjust = 1, label.color = NA) +
   geom_richtext(aes(x = 10, y = 8), label = "There would be **48 <br/>Priavte Schools**", color = "#8FBC8F", hjust = 1, label.color = NA) +
@@ -148,6 +149,7 @@ pt <- ggplot() +
 
 plot2<-pt+theme_school()
 print(plot2)
+ggsave("School Types in Philadelphia.jpeg",width=12,height=8)
 ```
 
 ## Average Annual Temperature in °F Change in Tucson, AZ between 1895 to 2020.
@@ -170,7 +172,7 @@ AvgYearAfter75<-mean(After75$Year)
 
 ### Plotting
 
-```{r}
+```{r }
 theme_Tucson<-function(){
   font<-"Times New Roman"
   theme_minimal()%+replace%
@@ -218,7 +220,7 @@ TC <- ggplot()+
   geom_point(aes(x = AvgYearAfter75,y=AvgAfter75),size=4,color="darkred") + 
   geom_label(aes(x = AvgYearAfter75, y = AvgAfter75), label = "AVG=69.94",hjust=-0.05,vjust=1.25, label.size = 0)+
   geom_point(aes(x = Year,y=Avg.Temp),size = 4,data = Lastyear,color="black")+
-  geom_text(data=Lastyear,aes(x=Year,y=Avg.Temp,label = Avg.Temp), vjust = -1, color = "black",size=3)+
+  geom_text(data=Lastyear,aes(x=Year,y=Avg.Temp,label = Avg.Temp), hjust=1.5, color = "black",size=3.5)+
   geom_smooth(data = Before75, aes(x=Year, y=Avg.Temp), method = "lm", se = FALSE,color="#18B4E5")+
   geom_smooth(data = After75, aes(x=Year, y=Avg.Temp), method = "lm", se = FALSE,color="#FF4233")+
   geom_vline(xintercept = 1975, color = "black",lty="dashed")+
@@ -227,5 +229,6 @@ TC <- ggplot()+
 
 plot3=TC+theme_Tucson()  
 print(plot3)
+ggsave("Historic Average Temperature in Tucson.jpeg",width=12,height=8)
 ```
 
